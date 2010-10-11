@@ -45,13 +45,15 @@ int main(int argc, char* argv[])
 
   N = 1;
 
-  while (N > 0) {    
+  while (N > 0) 
+  {    
 
 	    pvm_initsend(PvmDataDefault);
 	    pvm_catchout(stdout);
 	    gid = pvm_joingroup(grupo);
 	    
-	    if(gid == 0){
+	    if(gid == 0)
+	    {
 		N = solicita ();
 		if(N == 0) break;
 
@@ -62,22 +64,26 @@ int main(int argc, char* argv[])
 
 	    pvm_barrier(grupo, NUMPROCS);
 
-	    if(gid != 0){
+	    if(gid != 0)
+	    {
 	       pvm_recv(-1, 1);
 	       pvm_upkint(&N, 1, 1);  
 	    }
 	  
 	    sum = calcula(N,gid);
 	     
-	    if(gid != 0){
+	    if(gid != 0)
+	    {
 		pvm_pkdouble( &sum, 1, 1 );
 		pvm_send(pvm_parent(), 2);
 	    }
 
 	    pvm_barrier(grupo, NUMPROCS);
 
-	    if(gid == 0){
-		for(i=0;i<NUMPROCS-1;i++){
+	    if(gid == 0)
+	    {
+		for(i=0;i<NUMPROCS-1;i++)
+		{
 			pvm_recv(-1, 2);
 			pvm_upkdouble(&sumtemp, 1,1);
 			sum += sumtemp;
