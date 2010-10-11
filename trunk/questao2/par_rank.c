@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+/* Rank sort sequencial*/
 int main (void){
 	int tam, i, j, rank;
 	int *numeros;
@@ -28,7 +29,6 @@ int main (void){
 	printf("\n");
 	for(i=0;i<tam;i++)
 	{
-		puts("passei por aqui\n");
 		rank=0;
 		for(j=0;j<tam;j++)
 		{
@@ -48,7 +48,7 @@ int main (void){
 		printf(" %d ", rankeados[i] );
 		
 	}
-	puts("OK\n");
+	printf("\n");
 	free(numeros);
 	free(rankeados);
 	return 0;
