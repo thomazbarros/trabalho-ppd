@@ -2,16 +2,20 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 /* Rank sort sequencial*/
-int main (void){
+int main (int argc, char *argv[]){
 	int tam, i, j, rank;
-	int *numeros;
-	int *rankeados;
+	int *numeros, *rankeados;
+
 	srand(time(NULL));
+
 	printf("Digite o tamanho do vetor a ser ordenado:\n");
 	scanf("%d", &tam );
+
 	numeros=(int *) malloc (tam*sizeof(int));
 	rankeados=(int*) malloc (tam*sizeof(int));
+
 	if((!numeros)||(!rankeados))
 	{
 		printf("Erro na alocacao de memoria\n");
@@ -27,6 +31,8 @@ int main (void){
 		
 	}
 	printf("\n");
+	
+
 	for(i=0;i<tam;i++)
 	{
 		rank=0;
@@ -38,7 +44,7 @@ int main (void){
 			}
 		}
 		rankeados[rank]=numeros[i];
-		printf("rank:%d ", rank);
+//		printf("rank:%d ", rank);
 	}
 	
 	printf("Vetor ordenado:\n");
