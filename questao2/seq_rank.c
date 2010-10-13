@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*
+        Questão 2 do Trabalho 1 de Programacao Paralela e Distribuída
+        Renan da Costa Garrot DRE:108055521
+        Thomaz Avila Barros DRE:107363028
+	Versão sequencial do Rank Sort
+*/
 
-
-/* Rank sort sequencial*/
 int main (int argc, char *argv[]){
 	int tam, i, j, rank;
 	int *numeros, *rankeados;
@@ -44,7 +48,6 @@ int main (int argc, char *argv[]){
 			}
 		}
 		rankeados[rank]=numeros[i];
-//		printf("rank:%d ", rank);
 	}
 	
 	printf("Vetor ordenado:\n");
