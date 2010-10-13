@@ -3,11 +3,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define NUMPROCS 10
+#define NUMPROCS 4
 
-/* Rank sort paralelo v1*/
-
-
+/*
+        Questão 2 do Trabalho 1 de Programacao Paralela e Distribuída
+        Renan da Costa Garrot DRE:108055521
+        Thomaz Avila Barros DRE:107363028
+	Versão paralela do Rank Sort
+*/
 
 int *numeros;
 int *rankeados;
@@ -52,7 +55,7 @@ int main (int argc, char **argv){
 	parent = pvm_parent();
 
 	pvm_initsend(PvmDataDefault);
-	pvm_catchout(stdout);
+//	pvm_catchout(stdout);
 
 
 	if(parent == PvmNoParent){

@@ -1,16 +1,14 @@
-/*
- * Paralelização
- * Calpi
- * calpi.c
- * Ultima revisão GPS 18/08/04
-
-  Versao paralela
- 
-*/
-#include "pvm3.h"
+#include <pvm3.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <gpvm3.h>
+
+/*
+	Questão 1 do Trabalho 1 de Programacao Paralela e Distribuída
+	Renan da Costa Garrot DRE:108055521
+	Thomaz Avila Barros DRE:107363028
+*/
 
 #define f(x) ((double)(4.0/(1.0+x*x)))
 #define pi ((double)(4.0*atan(1.0)))
