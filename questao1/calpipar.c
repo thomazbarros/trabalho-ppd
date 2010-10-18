@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include <gpvm3.h>
+//#include <gpvm3.h>
 
 /*
 	Questão 1 do Trabalho 1 de Programacao Paralela e Distribuída
